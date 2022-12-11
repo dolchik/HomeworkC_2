@@ -9,16 +9,13 @@ Console.Clear();
 Console.Write("Введите номер дня недели: ");
 int numDay = int.Parse(Console.ReadLine());
 
-if ((numDay >= 1) && numDay <=7)  // проверка на соответвие 1-7
+if ((numDay == 6) || (numDay == 7)) // проверка на соответсвие выходным
 {
-    if ((numDay == 6) || (numDay == 7)) // проверка на соответсвие выходным
-    {
-        Console.WriteLine($"{numDay} -> да");
-    }
-    else
-    {
-        Console.WriteLine($"{numDay} -> нет");
-    }
+     Console.WriteLine($"{numDay} -> да");
+}
+else if ((numDay > 0) && (numDay < 6))
+{
+    Console.WriteLine($"{numDay} -> нет");
 }
 else
 {
