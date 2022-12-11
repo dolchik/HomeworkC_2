@@ -12,20 +12,16 @@ Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine());
 int number1 = number;
 int ostatok = 0;
-if (number >= 1000)
+
+while (number1 > 999)
 {
-    while (number1 > 1000)
-    {
-        number1 = number1 / 10;
-        Console.WriteLine(number1);
-    }
-        ostatok = number1 % 10;
-        Console.WriteLine($"{number} -> {ostatok}");
+    number1 = number1 / 10;
+    Console.WriteLine(number1);
 }
     
-else if ((100 <= number) && number < 1000)
+if (number1 > 99)
 {
-    ostatok = number % 10;
+    ostatok = number1 % 10;
     Console.WriteLine($"{number} -> {ostatok}");
 }
     
